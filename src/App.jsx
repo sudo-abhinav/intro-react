@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "./Table";
+import List from "./List";
 
 /*Add import statement here*/
 
@@ -60,7 +61,7 @@ class App extends React.Component {
     /*Uncomment below to render assignments*/
     if (this.state.buttonClicked === "assignments") {
       tabChoice = (
-        <list
+        <List
           placeholder="Add Assignment..."
           currList={this.state.assignments}
           addFunction={this.addAssignment}
@@ -73,7 +74,7 @@ class App extends React.Component {
 
     if (this.state.buttonClicked === "students") {
       tabChoice = (
-        < list
+        < List
           placeholder="Add Assignment..." 
           currList={this.state.assignments}
           addFunction={this.addAssignment}
