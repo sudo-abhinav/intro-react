@@ -21,8 +21,10 @@ class List extends React.Component {
     });
 
     this.props.addFunction(this.state.value);
+    // this.props.addAssignment(this.state.value) 
     event.preventDefault();
   }
+
 
   render() {
     return (
