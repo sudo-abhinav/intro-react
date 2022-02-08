@@ -40,7 +40,7 @@ class App extends React.Component {
 
   addStudent(studentName) {
     this.setState({
-      student: this.state.students.concat(studentName)
+      students: this.state.students.concat(studentName)
     });
   }
 
@@ -60,11 +60,12 @@ class App extends React.Component {
 
     /*Uncomment below to render assignments*/
     if (this.state.buttonClicked === "assignments") {
+      console.log("error yha pe hai bhai");
       tabChoice = (
         <List
-          placeholder="Add Student..."
-          currList={this.state.students}
-          addFunction={this.addStudent}
+          placeholder="Add assignment..."
+          currList={this.state.assignments}
+          addFunction={this.addAssignment}
           title="Assignments"
         />
       );
@@ -75,9 +76,9 @@ class App extends React.Component {
     if (this.state.buttonClicked === "students") {
       tabChoice = (
         < List
-          placeholder="Add Assignment..." 
-          currList={this.state.assignments}
-          addFunction={this.addAssignment}
+          placeholder="Add Student..." 
+          currList={this.state.students}
+          addFunction={this.addStudent}
           title="Student Roster"
         />
       );
